@@ -28,25 +28,28 @@ public class OrderService {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @Transactional
-    public HttpEntity<?> setOrderStatusToSent(Long id) {
+    private HttpEntity<?> setOrderStatus(Long id, Order.StatusType status) {
         var orderOpt = orderRepository.findById(id);
         if (orderOpt.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         Order order = orderOpt.get();
-        order.setStatus(Order.StatusType.SENT);
+        order.setStatus(status);
         return ResponseEntity.noContent().build();
     }
 
     @Transactional
+    public HttpEntity<?> setOrderStatusToSent(Long id) {
+        return setOrderStatus(id, Order.StatusType.SENT);
+    }
+
+    @Transactional
     public HttpEntity<?> setOrderStatusToPending(Long id) {
-        var orderOpt = orderRepository.findById(id);
-        if (orderOpt.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
-        Order order = orderOpt.get();
-        order.setStatus(Order.StatusType.PENDING);
-        return ResponseEntity.noContent().build();
+        return setOrderStatus(id, Order.StatusType.PENDING);
+    }
+
+    @Transactional
+    public HttpEntity<?> setOrderStatusToCompleted(Long id) {
+        return setOrderStatus(id, Order.StatusType.COMPLETED);
     }
 }

@@ -38,4 +38,10 @@ public class OrderController {
     public HttpEntity<?> setOrderStatusToPending(@PathVariable("id") Long id) {
         return orderService.setOrderStatusToPending(id);
     }
+
+    @PutMapping("/{id}/set-completed-status")
+    public HttpEntity<?> setOrderStatusToCompleted(@PathVariable("id") Long id) {
+        return orderService.setOrderStatusToCompleted(id);
+    }
+
 }
