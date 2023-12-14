@@ -40,7 +40,7 @@ public class CustomerController {
         return customerService.updateCustomer(id, customer);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/delete")
     HttpEntity<?> deleteCustomer(@PathVariable("id") Long id) {
         return customerService.deleteCustomer(id);
     }

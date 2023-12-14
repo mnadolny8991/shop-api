@@ -42,6 +42,7 @@ public class Order {
     public enum StatusType {
         PENDING,
         SENT,
-        COMPLETED
+        COMPLETED,
+        CANCELED
     }
 }

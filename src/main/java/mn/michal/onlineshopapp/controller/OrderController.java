@@ -44,4 +44,9 @@ public class OrderController {
         return orderService.setOrderStatusToCompleted(id);
     }
 
+    @PutMapping("/{id}/cancel")
+    public HttpEntity<?> deleteOrder(@PathVariable("id") Long id) {
+        return orderService.cancelOrder(id);
+    }
+
 }

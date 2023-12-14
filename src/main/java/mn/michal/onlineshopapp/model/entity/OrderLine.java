@@ -28,6 +28,6 @@ public class OrderLine {
     private int quantity;
     @NotNull
     private double unitPrice;
-    @Formula("unit_price * quantity")
+    @NotNull
     private double subtotal;
 }
