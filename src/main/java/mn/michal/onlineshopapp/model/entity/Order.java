@@ -29,13 +29,18 @@ public class Order {
     private LocalDateTime dateTime;
     @NotNull
     private double amount;
-    @NotBlank
-    private String status;
+    @Enumerated(EnumType.ORDINAL)
+    private StatusType status;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderLine> orderLines = new ArrayList<>();
 
     @PrePersist
     public void assignDateTime() {
         dateTime = LocalDateTime.now();
+    }
+
+    public enum StatusType {
+        PENDING,
+        SENT
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,5 +26,27 @@ public class OrderService {
         return orderRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @Transactional
+    public HttpEntity<?> setOrderStatusToSent(Long id) {
+        var orderOpt = orderRepository.findById(id);
+        if (orderOpt.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        Order order = orderOpt.get();
+        order.setStatus(Order.StatusType.SENT);
+        return ResponseEntity.noContent().build();
+    }
+
+    @Transactional
+    public HttpEntity<?> setOrderStatusToPending(Long id) {
+        var orderOpt = orderRepository.findById(id);
+        if (orderOpt.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        Order order = orderOpt.get();
+        order.setStatus(Order.StatusType.PENDING);
+        return ResponseEntity.noContent().build();
     }
 }

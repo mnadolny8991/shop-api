@@ -131,7 +131,7 @@ public class CustomerService {
         }
         order.setAmount(total);
         // TODO: remove magical value
-        order.setStatus("PENDING");
+        order.setStatus(Order.StatusType.PENDING);
         orderRepository.save(order);
         return ResponseEntity.created(URI.create("/customers/" + customerId + "/orders")).build();
     }

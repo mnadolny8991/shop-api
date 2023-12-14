@@ -136,3 +136,24 @@ The object is already closed [90007-224]
 2023-12-14 10:13:34.954470+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
 The object is already closed [90007-224]
+2023-12-14 10:46:45.153434+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
+Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
+2023-12-14 10:48:48.064240+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
+Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
+2023-12-14 10:49:22.946076+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
+Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
+2023-12-14 10:49:50.149573+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2023-12-14 10:50:12.777706+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2023-12-14 10:50:23.198136+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
