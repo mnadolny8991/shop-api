@@ -113,11 +113,14 @@ public class CustomerService {
             OrderLine orderLine = new OrderLine();
             orderLine.setOrder(order);
             orderLine.setProduct(productOpt.get());
-            if (orderLineDTO.getQuantity() > productOpt.get().getQuantity()) {
+            int productQuantity = productOpt.get().getQuantity();
+            int requestQuantity = orderLineDTO.getQuantity();
+            if (requestQuantity > productQuantity) {
                 return ResponseEntity
                         .status(HttpStatus.valueOf(409))
                         .body("Unavailable quantity");
             }
+            productOpt.get().setQuantity(productQuantity - requestQuantity);
             orderLine.setQuantity(orderLineDTO.getQuantity());
             double price = productOpt.get().getPrice();
             orderLine.setUnitPrice(price);
