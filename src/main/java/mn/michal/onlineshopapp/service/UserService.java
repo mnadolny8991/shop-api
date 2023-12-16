@@ -1,19 +1,19 @@
 package mn.michal.onlineshopapp.service;
 
-import mn.michal.onlineshopapp.model.dto.CustomerDTO;
+import mn.michal.onlineshopapp.model.dto.UserDTO;
 import mn.michal.onlineshopapp.model.dto.OrderInputDTO;
-import mn.michal.onlineshopapp.model.entity.Customer;
+import mn.michal.onlineshopapp.model.entity.User;
 import mn.michal.onlineshopapp.model.entity.Order;
 import mn.michal.onlineshopapp.model.entity.OrderLine;
-import mn.michal.onlineshopapp.model.repository.CustomerRepository;
+import mn.michal.onlineshopapp.model.repository.UserRepository;
 import mn.michal.onlineshopapp.model.repository.OrderRepository;
 import mn.michal.onlineshopapp.model.repository.ProductRepository;
-import mn.michal.onlineshopapp.service.mapper.CustomerDTOMapper;
-import org.aspectj.weaver.ast.Or;
+import mn.michal.onlineshopapp.service.mapper.UserDTOMapper;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,87 +21,90 @@ import java.net.URI;
 import java.util.List;
 
 @Service
-public class CustomerService {
-    CustomerRepository customerRepository;
-    CustomerDTOMapper customerDTOMapperService;
+public class UserService {
+    UserRepository userRepository;
+    UserDTOMapper userDTOMapper;
     ProductRepository productRepository;
     OrderRepository orderRepository;
 
-    public CustomerService(CustomerRepository customerRepository, CustomerDTOMapper customerDTOMapperService, ProductRepository productRepository, OrderRepository orderRepository) {
-        this.customerRepository = customerRepository;
-        this.customerDTOMapperService = customerDTOMapperService;
+    public UserService(UserRepository userRepository, UserDTOMapper userDTOMapper, ProductRepository productRepository, OrderRepository orderRepository) {
+        this.userRepository = userRepository;
+        this.userDTOMapper = userDTOMapper;
         this.productRepository = productRepository;
         this.orderRepository = orderRepository;
     }
 
-    public HttpEntity<List<CustomerDTO>> getAllCustomers(Pageable pageable) {
+    public HttpEntity<List<UserDTO>> getAllUsers(Pageable pageable) {
         return ResponseEntity.ok(
-                customerRepository.findAll(pageable).stream()
-                        .map(customerDTOMapperService)
+                userRepository.findAll(pageable).stream()
+                        .map(userDTOMapper)
                         .toList()
         );
     }
 
-    public HttpEntity<CustomerDTO> getCustomer(Long id) {
-        return customerRepository.findById(id)
-                .map(customerDTOMapperService)
+    public HttpEntity<UserDTO> getUser(Long id) {
+        return userRepository.findById(id)
+                .map(userDTOMapper)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @Transactional
-    public HttpEntity<?> updateCustomer(Long id, Customer customer) {
-        if (customer.getId() != null) {
-            if (!customer.getId().equals(id)) {
+    public HttpEntity<?> updateUser(Long id, User user) {
+        if (user.getId() != null) {
+            if (!user.getId().equals(id)) {
                 return ResponseEntity
                         .notFound()
                         .build();
             }
         }
-        var updateCustomerOpt = customerRepository.findById(id);
-        if (updateCustomerOpt.isPresent()) {
-            Customer updateCustomer = updateCustomerOpt.get();
-            updateCustomer.updateFrom(customer);
+        var updateUserOpt = userRepository.findById(id);
+        if (updateUserOpt.isPresent()) {
+            User updateUser = updateUserOpt.get();
+            updateUser.updateFrom(user);
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
     }
 
-    public HttpEntity<?> deleteCustomer(Long id) {
-        var customerOpt = customerRepository.findById(id);
-        if (customerOpt.isPresent()) {
-            customerRepository.deleteById(id);
+    public HttpEntity<?> deleteUser(Long id) {
+        var userOpt = userRepository.findById(id);
+        if (userOpt.isPresent()) {
+            userRepository.deleteById(id);
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
     }
 
-    public HttpEntity<?> addCustomer(Customer customer) {
-        if (customer.getId() != null)
-            if (customerRepository.existsById(customer.getId())) {
+    public HttpEntity<?> addUser(User user) {
+        if (user.getId() != null)
+            if (userRepository.existsById(user.getId())) {
                 return ResponseEntity
                         .status(HttpStatus.valueOf(409))
-                        .body("Customer with such id already exists");
+                        .body("User with such id already exists");
             }
-        if (customerRepository.existsByEmail(customer.getEmail())) {
+        if (userRepository.existsByEmail(user.getEmail())) {
             return ResponseEntity
                     .status(HttpStatus.valueOf(409))
-                    .body("Customer with such email already exists");
+                    .body("User with such email already exists");
         }
         // TODO: password validation
-        customerRepository.save(customer);
-        return ResponseEntity.created(URI.create("/customer/" + customer.getId())).build();
+        var passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+        userRepository.save(user);
+        return ResponseEntity.created(URI.create("/user/" + user.getId())).build();
     }
 
-    public HttpEntity<?> assignOrder(OrderInputDTO orderDTO, Long customerId) {
-        var customerOpt = customerRepository.findById(customerId);
-        if (customerOpt.isEmpty()) {
+    public HttpEntity<?> assignOrder(OrderInputDTO orderDTO, Long userId) {
+        var userOpt = userRepository.findById(userId);
+        if (userOpt.isEmpty()) {
             return ResponseEntity
                     .status(HttpStatus.valueOf(409))
-                    .body("Customer with such id does not exist");
+                    .body("User with such id does not exist");
         }
         Order order = new Order();
-        order.setCustomer(customerOpt.get());
+        order.setUser(userOpt.get());
         double total = 0.0;
         for (var orderLineDTO : orderDTO.getOrderLines()) {
             var productOpt = productRepository.findById(orderLineDTO.getProductId());
@@ -133,13 +136,13 @@ public class CustomerService {
         // TODO: remove magical value
         order.setStatus(Order.StatusType.PENDING);
         orderRepository.save(order);
-        return ResponseEntity.created(URI.create("/customers/" + customerId + "/orders")).build();
+        return ResponseEntity.created(URI.create("/users/" + userId + "/orders")).build();
     }
 
     public HttpEntity<List<Order>> getOrders(Long id) {
-        if (customerRepository.findById(id).isEmpty()) {
+        if (userRepository.findById(id).isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(orderRepository.findOrdersByCustomer_Id(id));
+        return ResponseEntity.ok(orderRepository.findOrdersByUser_Id(id));
     }
 }

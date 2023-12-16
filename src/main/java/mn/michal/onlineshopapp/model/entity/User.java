@@ -1,13 +1,11 @@
 package mn.michal.onlineshopapp.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.util.List;
 
@@ -15,8 +13,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "customers")
-public class Customer {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,16 +28,19 @@ public class Customer {
     @NotBlank(message = "Password field is required")
     private String password;
     @OneToMany(
-            mappedBy = "customer",
+            mappedBy = "user",
             cascade = CascadeType.ALL
     )
     private List<Order> orders;
+    @NotBlank(message = "Role is required")
+    private String role;
 
-    public Customer updateFrom(Customer customer) {
-        this.setFirstName(customer.getFirstName());
-        this.setLastName(customer.getLastName());
-        this.setEmail(customer.getEmail());
-        this.setPassword(customer.getPassword());
+    public User updateFrom(User user) {
+        this.setFirstName(user.getFirstName());
+        this.setLastName(user.getLastName());
+        this.setEmail(user.getEmail());
+        this.setPassword(user.getPassword());
+        this.setRole(user.getRole());
         return this;
     }
 }
