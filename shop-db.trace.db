@@ -1,231 +1,96 @@
-2023-12-11 12:06:47.852038+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-11 12:08:01.329140+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 11:14:45.975333+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 11:55:17.728540+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 12:03:01.144136+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 12:03:01.158133+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 13:29:58.271128+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-12 13:29:58.284128+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:00:03.936539+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:10:26.955123+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:25:55.399715+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:27:37.964770+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:28:17.474413+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 11:28:52.191039+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 15:57:09.984568+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 15:57:20.971762+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 15:57:43.081661+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 15:58:34.878198+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:00:05.309290+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:00:13.119014+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:00:26.096519+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:02:56.734820+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:03:01.245724+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:03:06.112526+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:05:45.791219+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:05:51.165706+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:05:56.528999+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:06:00.551077+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 16:06:00.553078+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:07:27.173692+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:07:27.185694+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:26:52.738007+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:27:59.658825+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:28:35.114653+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:28:35.116654+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-13 19:28:35.117655+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:08:34.138174+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:09:11.079942+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:09:55.420813+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:11:28.229672+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:11:39.568606+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:12:23.833611+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:13:09.325854+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:13:34.951475+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:13:34.954470+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:13:34.954470+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:46:45.153434+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
-Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
-INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
-2023-12-14 10:48:48.064240+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
-Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
-INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
-2023-12-14 10:49:22.946076+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"
-Data conversion error converting "'SENT' (ORDERS_COPY_3_0: ""STATUS"" TINYINT)"; SQL statement:
-INSERT INTO "PUBLIC"."ORDERS_COPY_3_0"("AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS") OVERRIDING SYSTEM VALUE SELECT "AMOUNT", "CUSTOMER_ID", "DATE_TIME", "ID", "STATUS" FROM "PUBLIC"."ORDERS" [22018-224]
-2023-12-14 10:49:50.149573+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:50:12.777706+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:50:23.198136+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:51:18.603162+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:51:23.823144+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:51:29.204160+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:51:36.882795+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 10:51:36.885793+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 11:13:09.431915+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 11:13:13.406195+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 11:13:18.571513+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 11:13:26.993807+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 11:13:26.995809+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:21:13.104935+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:22:00.415302+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:22:22.965928+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:22:35.904220+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:22:35.907220+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:44:29.383093+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:44:34.614094+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:44:42.136096+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:44:46.759743+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:44:46.761746+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:50:29.932901+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-14 15:50:29.933904+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-16 16:40:10.397541+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
-The object is already closed [90007-224]
-2023-12-16 17:18:36.911535+01:00 jdbc[3]: exception
+2023-12-17 08:51:00 database: flush
+org.h2.message.DbException: Błąd ogólny: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:719)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:153)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:875)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2023-12-17 08:51:00 database: opening C:/Users/Michał/Desktop/portfolio/online-shop-app/online-shop-app/shop-db
+org.h2.message.DbException: Błąd ogólny: "The write format 3 is larger than the supported format 2 [2.1.210/5]"
+General error: "The write format 3 is larger than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:719)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:153)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "The write format 3 is larger than the supported format 2 [2.1.210/5]"
+General error: "The write format 3 is larger than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:875)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2023-12-17 11:24:33.007841+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
 The object is already closed [90007-224]

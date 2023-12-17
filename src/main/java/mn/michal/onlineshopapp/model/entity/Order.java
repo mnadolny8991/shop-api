@@ -28,7 +28,7 @@ public class Order {
     private LocalDateTime dateTime;
     @NotNull
     private double amount;
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private StatusType status;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderLine> orderLines = new ArrayList<>();

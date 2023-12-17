@@ -14,6 +14,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,11 +28,14 @@ public class UserService {
     ProductRepository productRepository;
     OrderRepository orderRepository;
 
-    public UserService(UserRepository userRepository, UserDTOMapper userDTOMapper, ProductRepository productRepository, OrderRepository orderRepository) {
+    PasswordEncoder encoder;
+
+    public UserService(UserRepository userRepository, UserDTOMapper userDTOMapper, ProductRepository productRepository, OrderRepository orderRepository, PasswordEncoder encoder) {
         this.userRepository = userRepository;
         this.userDTOMapper = userDTOMapper;
         this.productRepository = productRepository;
         this.orderRepository = orderRepository;
+        this.encoder = encoder;
     }
 
     public HttpEntity<List<UserDTO>> getAllUsers(Pageable pageable) {
@@ -89,8 +93,7 @@ public class UserService {
                     .body("User with such email already exists");
         }
         // TODO: password validation
-        var passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        String encodedPassword = encoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         userRepository.save(user);
         return ResponseEntity.created(URI.create("/user/" + user.getId())).build();

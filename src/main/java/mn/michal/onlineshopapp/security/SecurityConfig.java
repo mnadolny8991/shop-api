@@ -2,6 +2,7 @@ package mn.michal.onlineshopapp.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -25,10 +26,14 @@ public class SecurityConfig {
         this.onlineShopUserDetailsService = onlineShopUserDetailsService;
     }
 
+    @Bean PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setPasswordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder());
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         daoAuthenticationProvider.setUserDetailsService(onlineShopUserDetailsService);
         return daoAuthenticationProvider;
     }
@@ -37,8 +42,10 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(c -> c.disable())
+                .anonymous(Customizer.withDefaults())
                 .authorizeHttpRequests(c -> c
-                        .anyRequest().authenticated())
+                        .anyRequest().hasRole("ADMIN"))
+                .authenticationProvider(daoAuthenticationProvider())
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }
